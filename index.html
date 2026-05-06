@@ -1,0 +1,900 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Long Haul Coverage | Trucking Insurance Quotes</title>
+  <meta name="description" content="Get competitive trucking insurance quotes for owner operators, fleets, hotshot drivers, long haul trucking, reefer, flatbed, box truck, and commercial auto coverage." />
+
+  <style>
+    :root {
+      --navy: #102033;
+      --blue: #1f5f99;
+      --orange: #f28c28;
+      --light: #f6f8fb;
+      --white: #ffffff;
+      --gray: #5f6b7a;
+      --dark: #17212f;
+      --border: #dbe3ee;
+      --green: #1f8f5f;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--dark);
+      background: var(--white);
+      line-height: 1.5;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .top-bar {
+      background: var(--navy);
+      color: var(--white);
+      padding: 10px 20px;
+      font-size: 14px;
+      text-align: center;
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 18px 6%;
+      background: var(--white);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 800;
+      font-size: 24px;
+      color: var(--navy);
+      letter-spacing: -0.5px;
+    }
+
+    .logo-mark {
+      width: 42px;
+      height: 42px;
+      background: linear-gradient(135deg, var(--orange), #ffb45f);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--navy);
+      font-weight: 900;
+    }
+
+    .header-phone {
+      font-weight: 700;
+      color: var(--blue);
+      font-size: 16px;
+    }
+
+    .hero {
+      background:
+        linear-gradient(90deg, rgba(16, 32, 51, 0.94), rgba(16, 32, 51, 0.74)),
+        radial-gradient(circle at 70% 30%, rgba(242, 140, 40, 0.25), transparent 26%),
+        linear-gradient(135deg, #102033, #24435f);
+      color: var(--white);
+      padding: 76px 6% 70px;
+    }
+
+    .hero-grid {
+      max-width: 1180px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 42px;
+      align-items: center;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255,255,255,0.12);
+      border: 1px solid rgba(255,255,255,0.2);
+      border-radius: 999px;
+      padding: 8px 14px;
+      font-weight: 700;
+      font-size: 14px;
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      font-size: clamp(38px, 5vw, 62px);
+      line-height: 1.03;
+      letter-spacing: -1.8px;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 20px;
+      color: #e5edf6;
+      max-width: 650px;
+      margin-bottom: 26px;
+    }
+
+    .hero-bullets {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px 18px;
+      margin: 26px 0 30px;
+      max-width: 660px;
+    }
+
+    .hero-bullets div {
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      color: #f5f7fa;
+      font-weight: 700;
+    }
+
+    .check {
+      color: var(--orange);
+      font-weight: 900;
+    }
+
+    .cta-row {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 10px;
+      padding: 15px 22px;
+      font-weight: 800;
+      border: none;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    .btn-primary {
+      background: var(--orange);
+      color: var(--navy);
+      box-shadow: 0 14px 30px rgba(242, 140, 40, 0.28);
+    }
+
+    .btn-secondary {
+      background: rgba(255,255,255,0.12);
+      color: var(--white);
+      border: 1px solid rgba(255,255,255,0.25);
+    }
+
+    .hero-card {
+      background: var(--white);
+      color: var(--dark);
+      border-radius: 22px;
+      padding: 28px;
+      box-shadow: 0 24px 70px rgba(0,0,0,0.28);
+    }
+
+    .hero-card h2 {
+      font-size: 26px;
+      margin-bottom: 8px;
+      color: var(--navy);
+    }
+
+    .hero-card p {
+      color: var(--gray);
+      font-size: 15px;
+      margin-bottom: 18px;
+    }
+
+    form {
+      display: grid;
+      gap: 13px;
+    }
+
+    label {
+      font-size: 13px;
+      font-weight: 800;
+      color: var(--navy);
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 13px 13px;
+      border: 1px solid var(--border);
+      border-radius: 9px;
+      font-size: 15px;
+      font-family: inherit;
+      background: #fff;
+    }
+
+    textarea {
+      min-height: 92px;
+      resize: vertical;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+
+    .privacy-note {
+      font-size: 12px !important;
+      color: var(--gray) !important;
+      margin: 2px 0 0 !important;
+    }
+
+    .section {
+      padding: 70px 6%;
+    }
+
+    .section-inner {
+      max-width: 1180px;
+      margin: 0 auto;
+    }
+
+    .section-title {
+      text-align: center;
+      max-width: 780px;
+      margin: 0 auto 38px;
+    }
+
+    .section-title h2 {
+      font-size: clamp(30px, 4vw, 44px);
+      letter-spacing: -1px;
+      color: var(--navy);
+      margin-bottom: 12px;
+    }
+
+    .section-title p {
+      color: var(--gray);
+      font-size: 18px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 24px;
+      box-shadow: 0 10px 28px rgba(16, 32, 51, 0.06);
+    }
+
+    .icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 14px;
+      background: #fff1df;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      margin-bottom: 16px;
+    }
+
+    .card h3 {
+      color: var(--navy);
+      font-size: 21px;
+      margin-bottom: 8px;
+    }
+
+    .card p, .card li {
+      color: var(--gray);
+      font-size: 15px;
+    }
+
+    .light {
+      background: var(--light);
+    }
+
+    .coverage-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 26px;
+      align-items: center;
+    }
+
+    .coverage-list {
+      display: grid;
+      gap: 12px;
+    }
+
+    .coverage-item {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 16px 18px;
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      box-shadow: 0 8px 18px rgba(16, 32, 51, 0.04);
+    }
+
+    .coverage-item strong {
+      display: block;
+      color: var(--navy);
+      margin-bottom: 2px;
+    }
+
+    .coverage-item span {
+      color: var(--gray);
+      font-size: 14px;
+    }
+
+    .visual-card {
+      background: var(--navy);
+      color: var(--white);
+      border-radius: 24px;
+      padding: 34px;
+      position: relative;
+      overflow: hidden;
+      min-height: 430px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .road {
+      height: 135px;
+      background: linear-gradient(180deg, #3b4654, #1e2835);
+      border-radius: 80% 80% 0 0;
+      position: relative;
+      margin-top: 30px;
+      overflow: hidden;
+    }
+
+    .road:before {
+      content: "";
+      position: absolute;
+      left: 50%;
+      top: 0;
+      transform: translateX(-50%);
+      width: 12px;
+      height: 100%;
+      background: repeating-linear-gradient(to bottom, #fff, #fff 18px, transparent 18px, transparent 36px);
+      opacity: 0.75;
+    }
+
+    .truck {
+      position: absolute;
+      bottom: 92px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 210px;
+      height: 88px;
+    }
+
+    .trailer {
+      position: absolute;
+      left: 0;
+      top: 22px;
+      width: 134px;
+      height: 54px;
+      background: #f3f7fc;
+      border-radius: 8px;
+      border: 3px solid #cbd6e3;
+    }
+
+    .cab {
+      position: absolute;
+      right: 6px;
+      top: 12px;
+      width: 72px;
+      height: 64px;
+      background: var(--orange);
+      border-radius: 12px 18px 8px 8px;
+    }
+
+    .cab:before {
+      content: "";
+      position: absolute;
+      right: 8px;
+      top: 9px;
+      width: 30px;
+      height: 20px;
+      background: #d9efff;
+      border-radius: 5px;
+    }
+
+    .wheel {
+      position: absolute;
+      bottom: 4px;
+      width: 24px;
+      height: 24px;
+      background: #111827;
+      border: 5px solid #64748b;
+      border-radius: 50%;
+    }
+
+    .w1 { left: 28px; }
+    .w2 { left: 100px; }
+    .w3 { right: 20px; }
+
+    .visual-card h3 {
+      font-size: 30px;
+      letter-spacing: -0.7px;
+      max-width: 420px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .visual-card p {
+      color: #d9e4f0;
+      margin-top: 12px;
+      max-width: 430px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .quote-strip {
+      background: var(--orange);
+      color: var(--navy);
+      padding: 34px 6%;
+    }
+
+    .quote-strip-inner {
+      max-width: 1180px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .quote-strip h2 {
+      font-size: 30px;
+      letter-spacing: -0.7px;
+    }
+
+    .quote-strip p {
+      font-weight: 700;
+    }
+
+    .btn-dark {
+      background: var(--navy);
+      color: var(--white);
+      white-space: nowrap;
+    }
+
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      counter-reset: step;
+    }
+
+    .step {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 26px;
+      position: relative;
+    }
+
+    .step:before {
+      counter-increment: step;
+      content: counter(step);
+      width: 40px;
+      height: 40px;
+      background: var(--blue);
+      color: var(--white);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 900;
+      margin-bottom: 15px;
+    }
+
+    .step h3 {
+      color: var(--navy);
+      margin-bottom: 8px;
+    }
+
+    .step p {
+      color: var(--gray);
+    }
+
+    .faq {
+      max-width: 900px;
+      margin: 0 auto;
+      display: grid;
+      gap: 14px;
+    }
+
+    .faq-item {
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 20px;
+      background: var(--white);
+    }
+
+    .faq-item h3 {
+      color: var(--navy);
+      margin-bottom: 6px;
+      font-size: 19px;
+    }
+
+    .faq-item p {
+      color: var(--gray);
+    }
+
+    .footer {
+      background: var(--navy);
+      color: #dce6f2;
+      padding: 38px 6%;
+      font-size: 14px;
+    }
+
+    .footer-inner {
+      max-width: 1180px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .footer strong {
+      color: var(--white);
+    }
+
+    @media (max-width: 900px) {
+      .hero-grid,
+      .coverage-grid,
+      .cards,
+      .steps {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        padding-top: 48px;
+      }
+
+      .hero-bullets {
+        grid-template-columns: 1fr;
+      }
+
+      .quote-strip-inner {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .header {
+        padding: 14px 5%;
+      }
+
+      .logo {
+        font-size: 19px;
+      }
+
+      .header-phone {
+        display: none;
+      }
+
+      .form-row {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-card {
+        padding: 22px;
+      }
+
+      .section {
+        padding: 52px 5%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="top-bar">Commercial trucking insurance quotes for owner operators, fleets, hotshot, reefer, flatbed, and long haul operations.</div>
+
+  <header class="header">
+    <a href="#top" class="logo" aria-label="Long Haul Coverage home">
+      <span class="logo-mark">LH</span>
+      <span>Long Haul Coverage</span>
+    </a>
+    <a href="#quote" class="header-phone">Get a Quote →</a>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-grid">
+        <div>
+          <div class="badge">🚛 Built for trucking businesses</div>
+          <h1>Trucking insurance quotes without wasting your whole day.</h1>
+          <p>Tell us what you haul, where you run, and how your operation is set up. We help connect trucking businesses with commercial insurance options that fit their risk.</p>
+
+          <div class="hero-bullets">
+            <div><span class="check">✓</span> Owner operators</div>
+            <div><span class="check">✓</span> Long haul trucking</div>
+            <div><span class="check">✓</span> Hotshot drivers</div>
+            <div><span class="check">✓</span> Small fleets</div>
+            <div><span class="check">✓</span> Reefer & flatbed</div>
+            <div><span class="check">✓</span> New ventures</div>
+          </div>
+
+          <div class="cta-row">
+            <a href="#quote" class="btn btn-primary">Start My Quote</a>
+            <a href="#coverage" class="btn btn-secondary">See Coverage Types</a>
+          </div>
+        </div>
+
+        <div class="hero-card" id="quote">
+          <h2>Request a trucking insurance quote</h2>
+          <p>Submit the basics below. A trucking insurance specialist can follow up for details.</p>
+
+          <!-- Replace YOUR_FORMSPREE_ENDPOINT_HERE with your real Formspree endpoint. Example: https://formspree.io/f/abcdwxyz -->
+          <form action="YOUR_FORMSPREE_ENDPOINT_HERE" method="POST">
+            <input type="hidden" name="lead_source" value="longhaulcoverage.com" />
+            <input type="hidden" name="vertical" value="Trucking Insurance" />
+
+            <div class="form-row">
+              <div>
+                <label for="first_name">First Name</label>
+                <input id="first_name" name="first_name" type="text" autocomplete="given-name" required />
+              </div>
+              <div>
+                <label for="last_name">Last Name</label>
+                <input id="last_name" name="last_name" type="text" autocomplete="family-name" required />
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div>
+                <label for="phone">Phone</label>
+                <input id="phone" name="phone" type="tel" inputmode="tel" placeholder="(555) 555-5555" required />
+              </div>
+              <div>
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" autocomplete="email" required />
+              </div>
+            </div>
+
+            <div>
+              <label for="company">Company Name</label>
+              <input id="company" name="company" type="text" autocomplete="organization" />
+            </div>
+
+            <div class="form-row">
+              <div>
+                <label for="operation_type">Operation Type</label>
+                <select id="operation_type" name="operation_type" required>
+                  <option value="">Select one</option>
+                  <option>Owner Operator</option>
+                  <option>Small Fleet</option>
+                  <option>Hotshot</option>
+                  <option>Long Haul</option>
+                  <option>Reefer</option>
+                  <option>Flatbed</option>
+                  <option>Box Truck</option>
+                  <option>Dump Truck</option>
+                  <option>Other</option>
+                </select>
+              </div>
+              <div>
+                <label for="trucks">Number of Trucks</label>
+                <select id="trucks" name="number_of_trucks" required>
+                  <option value="">Select one</option>
+                  <option>1</option>
+                  <option>2-5</option>
+                  <option>6-10</option>
+                  <option>11-25</option>
+                  <option>26+</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div>
+                <label for="dot_number">DOT Number</label>
+                <input id="dot_number" name="dot_number" type="text" placeholder="Optional" />
+              </div>
+              <div>
+                <label for="renewal_date">Renewal Date</label>
+                <input id="renewal_date" name="renewal_date" type="date" />
+              </div>
+            </div>
+
+            <div>
+              <label for="notes">What do you haul?</label>
+              <textarea id="notes" name="haul_details" placeholder="Example: dry van freight, refrigerated goods, equipment, autos, general freight, etc."></textarea>
+            </div>
+
+            <button class="btn btn-primary" type="submit">Request My Quote</button>
+            <p class="privacy-note">By submitting this form, you agree to be contacted about trucking insurance options. This is not a guarantee of coverage or pricing.</p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-inner">
+        <div class="section-title">
+          <h2>Coverage for real trucking operations</h2>
+          <p>Whether you are running one truck or managing a growing fleet, the right trucking insurance setup depends on your equipment, cargo, radius, contracts, filings, and loss history.</p>
+        </div>
+
+        <div class="cards">
+          <div class="card">
+            <div class="icon">🛡️</div>
+            <h3>Primary Liability</h3>
+            <p>Required coverage for bodily injury and property damage claims while operating commercially.</p>
+          </div>
+          <div class="card">
+            <div class="icon">🚚</div>
+            <h3>Physical Damage</h3>
+            <p>Protects your tractor, trailer, and equipment from covered losses like collision, theft, fire, and vandalism.</p>
+          </div>
+          <div class="card">
+            <div class="icon">📦</div>
+            <h3>Motor Truck Cargo</h3>
+            <p>Coverage for freight you haul, with limits and exclusions that need to match your contracts and commodities.</p>
+          </div>
+          <div class="card">
+            <div class="icon">🧾</div>
+            <h3>General Liability</h3>
+            <p>Protection for certain business liability exposures away from normal truck operation.</p>
+          </div>
+          <div class="card">
+            <div class="icon">🧭</div>
+            <h3>Non-Trucking Liability</h3>
+            <p>Coverage that may apply when the truck is being used outside dispatch or business use, depending on policy terms.</p>
+          </div>
+          <div class="card">
+            <div class="icon">⚙️</div>
+            <h3>Filings & Compliance</h3>
+            <p>Help with common trucking insurance filing needs such as federal and state requirements when applicable.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section light" id="coverage">
+      <div class="section-inner coverage-grid">
+        <div>
+          <div class="section-title" style="text-align:left;margin:0 0 26px;">
+            <h2>Built around how you run.</h2>
+            <p>Trucking insurance is not one-size-fits-all. A hotshot operator, reefer carrier, flatbed hauler, and 12-truck fleet all have different carrier appetite and underwriting questions.</p>
+          </div>
+
+          <div class="coverage-list">
+            <div class="coverage-item"><span class="check">✓</span><div><strong>Owner operators</strong><span>Quotes for single-truck businesses and independent drivers.</span></div></div>
+            <div class="coverage-item"><span class="check">✓</span><div><strong>Hotshot trucking</strong><span>Coverage options for pickup-and-trailer commercial hauling operations.</span></div></div>
+            <div class="coverage-item"><span class="check">✓</span><div><strong>Long haul & regional</strong><span>Insurance based on radius, lanes, freight type, and experience.</span></div></div>
+            <div class="coverage-item"><span class="check">✓</span><div><strong>Fleets</strong><span>Options for growing trucking businesses with multiple units and drivers.</span></div></div>
+          </div>
+        </div>
+
+        <div class="visual-card" aria-label="Truck illustration">
+          <div>
+            <h3>Keep your trucks moving with coverage that matches the job.</h3>
+            <p>Long Haul Coverage helps trucking businesses get pointed toward the right commercial insurance options faster.</p>
+          </div>
+          <div class="truck" aria-hidden="true">
+            <div class="trailer"></div>
+            <div class="cab"></div>
+            <div class="wheel w1"></div>
+            <div class="wheel w2"></div>
+            <div class="wheel w3"></div>
+          </div>
+          <div class="road" aria-hidden="true"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="quote-strip">
+      <div class="quote-strip-inner">
+        <div>
+          <h2>Ready to compare trucking insurance options?</h2>
+          <p>Start with the basics. No giant application just to begin.</p>
+        </div>
+        <a href="#quote" class="btn btn-dark">Start Quote</a>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-inner">
+        <div class="section-title">
+          <h2>How it works</h2>
+          <p>A simple lead flow that gets the right information without scaring people off.</p>
+        </div>
+        <div class="steps">
+          <div class="step">
+            <h3>Submit the basics</h3>
+            <p>Driver or business enters contact info, operation type, number of trucks, DOT number, and what they haul.</p>
+          </div>
+          <div class="step">
+            <h3>Review the risk</h3>
+            <p>A trucking insurance specialist reviews the operation, radius, cargo, equipment, filings, and timing.</p>
+          </div>
+          <div class="step">
+            <h3>Compare options</h3>
+            <p>The prospect can be matched with available markets or quote options based on carrier appetite.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section light">
+      <div class="section-inner">
+        <div class="section-title">
+          <h2>Common questions</h2>
+        </div>
+        <div class="faq">
+          <div class="faq-item">
+            <h3>Can new trucking ventures get quotes?</h3>
+            <p>Yes, but new ventures are underwritten differently. Experience, equipment, radius, cargo, and filings can all affect available options.</p>
+          </div>
+          <div class="faq-item">
+            <h3>Do I need a DOT number to request a quote?</h3>
+            <p>No. You can submit the form without it, but having your DOT number helps speed up review when available.</p>
+          </div>
+          <div class="faq-item">
+            <h3>What information helps get a better quote?</h3>
+            <p>Truck and trailer details, driver information, garaging address, loss runs, current declarations, cargo type, operating radius, and renewal date are all helpful.</p>
+          </div>
+          <div class="faq-item">
+            <h3>Is this only for long haul truckers?</h3>
+            <p>No. Long Haul Coverage can be positioned broadly for owner operators, hotshot, regional, flatbed, reefer, box truck, and fleet operations.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div>
+        <strong>Long Haul Coverage</strong><br />
+        Trucking insurance quote requests for commercial operators.
+      </div>
+      <div>
+        This website is for lead generation and referral purposes. Coverage availability, terms, and pricing vary by carrier, state, and underwriting review.
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const phoneInput = document.getElementById('phone');
+
+    phoneInput.addEventListener('input', function (event) {
+      let value = event.target.value.replace(/\D/g, '').substring(0, 10);
+      let formatted = value;
+
+      if (value.length > 6) {
+        formatted = `(${value.substring(0, 3)}) ${value.substring(3, 6)}-${value.substring(6)}`;
+      } else if (value.length > 3) {
+        formatted = `(${value.substring(0, 3)}) ${value.substring(3)}`;
+      } else if (value.length > 0) {
+        formatted = `(${value}`;
+      }
+
+      event.target.value = formatted;
+    });
+  </script>
+</body>
+</html>
